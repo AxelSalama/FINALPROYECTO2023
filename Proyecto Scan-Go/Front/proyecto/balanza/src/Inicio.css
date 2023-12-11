@@ -1,0 +1,163 @@
+* {
+  overflow: hidden;
+}
+
+.barra-superior {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 420px;
+  height: 120px;
+  background-color: #266165;
+}
+
+.MensajeRecuadro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.LogoInicio {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 81px;
+  height: 81px;
+}
+
+.QRInicio {
+  position: absolute;
+  top: 22px;
+  left: 308px;
+  width: 81px;
+  height: 81px;
+}
+
+.inputPersonalizado {
+  width: 200px;
+  height: 60px;
+  left: 0px;
+  font-size: 22px;
+  padding: 12px;
+  background-color: #55E1EA;
+  font-family: 'Lexend', sans-serif;
+}
+
+.BotonLateral {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+  width: 70px;
+  height: 40px;
+}
+
+.RecuadroSuperior {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 81px;
+  background-color: #55E1EA;
+  border-radius: 20px;
+}
+
+.RecuadroInferior {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 368px;
+  height: 658px;
+  background-color: #509599;
+  border-radius: 50px;
+  overflow: auto;
+  font-family: 'Lexend', sans-serif;
+}
+
+.TxtInicio {
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  font-size: 18px;
+  font-family: 'Lexend', sans-serif;
+}
+
+.txtResultado {
+  margin-left: 12px;
+  font-size: 20px;
+}
+
+.productoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.botonVerde,
+.botonRojo {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botonVerde {
+  background-color: green;
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.botonRojo {
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.textoA {
+  margin-left: 290px;
+  margin-top: 5px;
+}
+
+.BotonBienvenida {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 81px;
+  height: 81px;
+  background: transparent;
+  border: none;
+  color: transparent;
+  z-index: 999;
+}
+
+.RecuadroPrecioFinal {
+  position: absolute;
+  top: 122px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 290px;
+  height: 40px;
+  background-color: #55E1EA;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+}

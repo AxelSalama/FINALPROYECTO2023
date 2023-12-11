@@ -1,0 +1,10 @@
+.BtnBienvenida {
+  width: 200px;
+  height: 52px;
+  background-color: transparent;
+  border-radius: 40px;
+  position: absolute; 
+  top: 608px; 
+  right: 94px; 
+  border: none;
+}

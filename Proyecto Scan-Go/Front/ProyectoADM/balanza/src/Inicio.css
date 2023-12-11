@@ -1,0 +1,158 @@
+*{
+  overflow: hidden;
+}
+
+.barra-superior {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1400px;
+  height: 120px;
+  background-color: #266165;
+}
+
+.MensajeRecuadro {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  padding: 10px;
+  background-color: red; 
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2; 
+  font-size: 25px;
+}
+
+
+.LogoInicio {
+  position: absolute;
+  top: 16px; 
+  left: 5px; 
+  width: 100px; 
+  height: 100px;
+}
+
+.QRInicio {
+  position: absolute;
+  top: 15px;
+  left: 1250px; 
+  width: 100x; 
+  height: 100px;
+}
+
+.inputPersonalizado {
+  width: 400px; 
+  height: 60px;
+  left: 0px;
+  font-size: 22px;
+  padding: 12px; 
+  background-color: #55E1EA;
+  font-family: 'Lexend', sans-serif; 
+}
+
+.BotonLateral{
+  position: absolute;
+  top: 50px;
+  left: 120px; 
+  width: 70px; 
+  height: 40px;
+}
+
+.RecuadroSuperior {
+  position: absolute;
+  top: 22px; 
+  left: 75%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 81px; 
+  background-color: #55E1EA; 
+  border-radius: 20px;
+}
+
+  .RecuadroInferior {
+    position: absolute;
+    top: 150px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 90px;
+    background-color: #509599;
+    border-radius: 50px;
+    overflow: auto;
+    font-family: 'Lexend', sans-serif; 
+  }
+
+.txtResultado{
+  margin-left: 500px;
+  font-size: 27px;
+}
+
+.BotonTransparente {
+  position: absolute;
+  top: 150px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 90px; 
+  background: transparent;
+  font-size: 18px;
+  z-index: 10;
+  border-color: transparent;
+  border-radius: 50px;
+}
+
+.BotonCarro {
+  position: absolute;
+  top: 250px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 90px; 
+  background: #509599;
+  font-size: 18px;
+  z-index: -10;
+  border-color: transparent;
+  border-radius: 50px;
+}
+.BotonCarroA {
+  position: absolute;
+  top: 350px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 90px; 
+  background: #509599;
+  font-size: 18px;
+  z-index: -10;
+  border-color: transparent;
+  border-radius: 50px;
+}
+.BotonCarroB {
+  position: absolute;
+  top: 450px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 90px; 
+  background: #509599;
+  font-size: 18px;
+  z-index: -10;
+  border-color: transparent;
+  border-radius: 50px;
+}
+.BotonCarroC {
+  position: absolute;
+  top: 550px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 90px; 
+  background: #509599;
+  font-size: 18px;
+  z-index: -10;
+  border-color: transparent;
+  border-radius: 50px;
+}

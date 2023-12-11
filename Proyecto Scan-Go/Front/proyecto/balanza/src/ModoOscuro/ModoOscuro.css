@@ -1,0 +1,26 @@
+.BtnBienvenida2 {
+  position: absolute;
+  top: 412px;
+  left: 528px;
+  width: 315px; 
+  height: 95px;
+  background-color: transparent;
+  border-radius: 20px; 
+  border: none;
+}
+
+.BtnOscuro {
+  position: absolute;
+  top: 19px;
+  left: 1122px;
+  width: 100px; 
+  height: 100px; 
+  border-radius: 18px; 
+  border: none;
+  background-color: transparent;
+}
+
+.ImagenBienvenida2 {
+  width: 1100px; 
+  height: 650px; 
+}

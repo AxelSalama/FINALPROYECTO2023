@@ -1,0 +1,29 @@
+.PestanaCarro {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImagenAdmChangoA {
+  width: 1365px;
+  height: 653px;
+}
+
+.PestanaCarro p {
+  position: absolute; 
+  top: 0px; 
+  left: 608px; 
+  color: white;
+  font-size: 38px; 
+}
+
+.PestanaCarro p1{
+  position: absolute; 
+  top: 1000px; 
+  left: 608px; 
+  color: white; 
+  font-size: 38px; 
+}

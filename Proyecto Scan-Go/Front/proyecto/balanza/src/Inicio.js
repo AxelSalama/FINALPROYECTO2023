@@ -18,7 +18,7 @@ function Inicio() {
   useEffect(() => {
     async function fetchProductos() {
       try {
-        const response = await fetch(`URL_DE_TU_API/productos/${carroNumero}`);
+        const response = await fetch(`http://localhost:9000/api/carrito`);
         if (response.ok) {
           const data = await response.json();
           setProductos(data);

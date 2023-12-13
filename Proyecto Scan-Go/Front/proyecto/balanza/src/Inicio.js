@@ -18,7 +18,7 @@ function Inicio() {
   useEffect(() => {
     async function fetchProductos() {
       try {
-        const response = await fetch(`http://localhost:9000/api/carrito`);
+        const response = await fetch(`http://localhost:9000/api/carritos/:carritoId`);
         if (response.ok) {
           const data = await response.json();
           setProductos(data);

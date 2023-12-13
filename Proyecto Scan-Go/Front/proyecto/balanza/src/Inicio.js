@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from './logo.png';
 import qr from './qr.png';
-import './Inicio.css';
-import { useNavigate } from 'react-router-dom';
+import './Inicio.css'; // Asegúrate de tener el archivo CSS correspondiente
 
 function Inicio() {
   const [inputValue, setInputValue] = useState('');
@@ -11,14 +11,10 @@ function Inicio() {
   const [carroNumero, setCarroNumero] = useState('');
   const navigate = useNavigate();
 
-  const handleIniciarClick = () => {
-    navigate('/');
-  };
-
   useEffect(() => {
     async function fetchProductos() {
       try {
-        const response = await fetch(`http://localhost:9000/api/carritos/:carritoId`);
+        const response = await fetch(`http://localhost:9000/api/carritos/${carroNumero}`);
         if (response.ok) {
           const data = await response.json();
           setProductos(data);
@@ -39,6 +35,10 @@ function Inicio() {
     }
   }, [carroNumero]);
 
+  const handleIniciarClick = () => {
+    navigate('/');
+  };
+
   const handleInputChange = (event) => {
     const inputValue = event.target.value.replace(/\D/g, '');
     setInputValue(inputValue);
@@ -48,15 +48,7 @@ function Inicio() {
   };
 
   const buscarProductos = () => {
-    const productoEncontrado = codigoProductoMap[inputValue];
-
-    if (productoEncontrado) {
-      setProductos([{ nombre: productoEncontrado, mostrarBotones: true }]);
-      setShowError(false);
-    } else {
-      setCarroNumero(inputValue);
-    }
-
+    setCarroNumero(inputValue);
     setInputValue('');
   };
 
@@ -85,11 +77,6 @@ function Inicio() {
     }, 0);
 
     return precioFinal.toFixed(2);
-  };
-
-  const codigoProductoMap = {
-    '123': 'Coca-Cola $400 5000112642896',
-    '456': 'Pan Lactal Bimbo $300',
   };
 
   return (

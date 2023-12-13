@@ -83,6 +83,7 @@ app.post('/api/products', async (req, res) => {
 
 // Ruta POST: Agregar un producto existente a un carrito
 app.post('/api/carritos/:carritoId/items/:productoId', async (req, res) => {
+  console.log(req.body);
   try {
     const { carritoId, productoId } = req.params;
 

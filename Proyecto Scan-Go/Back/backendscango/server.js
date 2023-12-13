@@ -1,12 +1,11 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
-const bodyParser = require('body-parser');
 
 const app = express();
 const port = 9000;
 
 // Configurar middleware para analizar datos JSON en las solicitudes
-app.use(bodyParser.json());
+app.use(express.json());
 
 const prisma = new PrismaClient();
 
@@ -62,6 +61,7 @@ app.get('/api/carritos/:carritoId', async (req, res) => {
 // Ruta POST: Insertar nuevo producto
 app.post('/api/products', async (req, res) => {
   try {
+    console.log(req.body);
     const { nombre, precio, peso, carritoId } = req.body;
 
     // Utiliza el cliente Prisma para insertar un nuevo producto en la base de datos

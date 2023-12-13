@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo.png';
 import qr from './qr.png';
-import './Inicio.css'; // Asegúrate de tener el archivo CSS correspondiente
+import './Inicio.css'; 
 
 function Inicio() {
   const [inputValue, setInputValue] = useState('');
@@ -14,7 +14,7 @@ function Inicio() {
   useEffect(() => {
     async function fetchProductos() {
       try {
-        const response = await fetch(`http://localhost:9000/api/carritos/${carroNumero}`);
+        const response = await fetch(`http://localhost:9000/api/carritos`);
         if (response.ok) {
           const data = await response.json();
           setProductos(data);

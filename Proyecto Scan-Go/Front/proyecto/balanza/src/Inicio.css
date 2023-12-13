@@ -52,14 +52,6 @@
   font-family: 'Lexend', sans-serif;
 }
 
-.BotonLateral {
-  position: absolute;
-  top: 50px;
-  left: 120px;
-  width: 70px;
-  height: 40px;
-}
-
 .RecuadroSuperior {
   position: absolute;
   top: 22px;
@@ -160,4 +152,12 @@
   font-size: 12px;
   font-family: 'Lexend', sans-serif;
   font-size: 20px;
+}
+
+.RecuadroPrecioFinal {
+  position: absolute;
+}
+
+.txtResultado{
+  position: absolute;
 }

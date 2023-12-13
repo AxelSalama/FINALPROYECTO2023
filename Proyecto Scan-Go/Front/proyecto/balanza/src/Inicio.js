@@ -127,7 +127,7 @@ function Inicio() {
             </div>
           ))}
         </div>
-        {/* Nuevo recuadro para el Precio Final */}
+        {/* Recuadro para el Precio Final */}
         <div className="RecuadroPrecioFinal">
           <p>Precio Final: ${calcularPrecioFinal()}</p>
         </div>

@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model CarritoDeCompras {
+  id        int      @id @default(autoincrement())
+  items     Producto[]
+}
+
+model Producto {
+  id        int      @id @default(autoincrement())
+  nombre    string
+  precio    float
+  peso      float  // Agregamos el campo peso al modelo
+  // Otros campos del producto
+  
+  carrito   CarritoDeCompras @relation(fields: [carritoId], references: [id])
+  carritoId int
+}

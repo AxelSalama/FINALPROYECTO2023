@@ -12,17 +12,17 @@ datasource db {
 }
 
 model CarritoDeCompras {
-  id        int      @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   items     Producto[]
 }
 
 model Producto {
-  id        int      @id @default(autoincrement())
-  nombre    string
-  precio    float
-  peso      float  // Agregamos el campo peso al modelo
+  id        Int      @id @default(autoincrement())
+  nombre    String
+  precio    Float
+  peso      Float  // Agregamos el campo peso al modelo
   // Otros campos del producto
   
   carrito   CarritoDeCompras @relation(fields: [carritoId], references: [id])
-  carritoId int
+  carritoId Int
 }

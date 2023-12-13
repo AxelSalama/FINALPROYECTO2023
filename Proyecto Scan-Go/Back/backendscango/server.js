@@ -3,7 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
+const port = 9000;
 
 // Configurar middleware para analizar datos JSON en las solicitudes
 app.use(bodyParser.json());

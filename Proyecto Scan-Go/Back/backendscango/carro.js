@@ -5,41 +5,15 @@ async function main() {
   try {
     // Crear un nuevo CarritoDeCompras con enUso establecido en true
     const newCarrito = await prisma.carritoDeCompras.create({
-      {
-        "data": {
-          "id": 3, // CarritoDeCompras ID
-          "items": [
-            {
-              "id": 2,
-              "nombre": "Confites Rocklets",
-              "precio": 180,
-              "peso": 100,
-              "carritoId": 3
-            },
-            {
-              "id": 3,
-              "nombre": "Confites Rocklets",
-              "precio": 180,
-              "peso": 100,
-              "carritoId": 3
-            },
-            {
-              "id": 4,
-              "nombre": "Confites Rocklets",
-              "precio": 180,
-              "peso": 100,
-              "carritoId": 3
-            },
-            {
-              "id": 5,
-              "nombre": "Papas fritas",
-              "precio": 300,
-              "peso": 315,
-              "carritoId": 3
-            }
-          ]
-        }
-      }
+      data: {
+        items: {
+          create: [{
+            nombre: "Papas fritas",
+            precio: 300,
+            peso: 315,
+          }],
+        },
+      },
     });
 
     console.log('Nuevo carrito de compras creado:', newCarrito);
@@ -48,8 +22,20 @@ async function main() {
     if (newCarrito) {
       console.log('Carrito creado exitosamente.');
 
-      // Puedes realizar otras operaciones relacionadas con el carrito aquí si es necesario
+      // Obtener el ID del nuevo carrito
+      const carritoId = newCarrito.id;
 
+      // Asociar el producto al carrito
+      const newProducto = await prisma.producto.create({
+        data: {
+          nombre: "Papas fritas",
+          precio: 300,
+          peso: 315,
+          carritoId: carritoId,
+        },
+      });
+
+      console.log('Producto añadido al carrito:', newProducto);
     } else {
       console.log('Error al crear el carrito de compras.');
     }

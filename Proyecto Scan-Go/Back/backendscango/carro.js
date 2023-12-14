@@ -1,13 +1,45 @@
 const { PrismaClient } = require('@prisma/client');
-
 const prisma = new PrismaClient();
 
 async function main() {
   try {
     // Crear un nuevo CarritoDeCompras con enUso establecido en true
     const newCarrito = await prisma.carritoDeCompras.create({
-      data: {
-      },
+      {
+        "data": {
+          "id": 3, // CarritoDeCompras ID
+          "items": [
+            {
+              "id": 2,
+              "nombre": "Confites Rocklets",
+              "precio": 180,
+              "peso": 100,
+              "carritoId": 3
+            },
+            {
+              "id": 3,
+              "nombre": "Confites Rocklets",
+              "precio": 180,
+              "peso": 100,
+              "carritoId": 3
+            },
+            {
+              "id": 4,
+              "nombre": "Confites Rocklets",
+              "precio": 180,
+              "peso": 100,
+              "carritoId": 3
+            },
+            {
+              "id": 5,
+              "nombre": "Papas fritas",
+              "precio": 300,
+              "peso": 315,
+              "carritoId": 3
+            }
+          ]
+        }
+      }
     });
 
     console.log('Nuevo carrito de compras creado:', newCarrito);
